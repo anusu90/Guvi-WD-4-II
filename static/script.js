@@ -53,6 +53,7 @@ displayHTML =  (Jbody) => {
 
 document.querySelectorAll('.link-tag').forEach((aTag) => {
     aTag.addEventListener('click', (e) => {
+        console.log(e);
         sec = (e.explicitOriginalTarget.innerText.toLowerCase())
         let url = `https://api.nytimes.com/svc/topstories/v2/${sec}.json?api-key=itBagv4BooQtWpHceGUguaSH86K5Be2O`
         getData(url);
